@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  fe:
+    build:
+      context: mf.fe/
+      dockerfile: Dockerfile
+    container_name: fe
+    ports:
+      - "3000:3000"
+  
+  nginx:
+    build:
+      context: nginx/
+      dockerfile: Dockerfile
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/cond.d/nginx.conf
+    depends_on:
+      - fe
