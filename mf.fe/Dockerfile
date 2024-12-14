@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 RUN npm install  tailwindcss@latest postcss@latest autoprefixer@latest
-#RUN npm run build
+RUN npm run build
 
 EXPOSE 3000
 
