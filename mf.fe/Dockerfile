@@ -4,11 +4,11 @@ WORKDIR /app/fe
 
 COPY package.json ./
 
-RUN npm install
+RUN npm ci
 
 COPY . .
-RUN npm install  tailwindcss@latest postcss@latest autoprefixer@latest
-RUN npm run build
+RUN npm i  tailwindcss@latest postcss@latest autoprefixer@latest
+RUN npm run build --prod
 
 EXPOSE 3000
 
