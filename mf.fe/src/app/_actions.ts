@@ -1,7 +1,3 @@
-import { url } from "inspector";
-import { NextRequest, NextResponse } from "next/server";
-
-
 
 export default async function request(url: string, method: string){
     //console.log(`URL------> ${url}`)

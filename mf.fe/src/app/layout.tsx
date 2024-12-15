@@ -1,22 +1,14 @@
 import React from "react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import{ Metal } from "next/font/google"
 import "./globals.css";
-import Script from "next/script";
-import Head from "next/head";
 
 import Footer from "./components/layout/footer";
-import Game from "./Home/page";
 import "./globals.css"
 
 
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",

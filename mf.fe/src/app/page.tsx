@@ -1,10 +1,6 @@
 "use client"
 import React from "react";
 
-import { useRouter } from "next/navigation"
-import { usePathname } from "next/navigation";
-import Image from "next/image";
-
 export default function Home() {
   return (
         <section>
