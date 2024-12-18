@@ -18,8 +18,11 @@ services:
       - "443:443"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/cond.d/nginx.conf
-    depends_on:
-      - fe
+      - ./nginx/cert.pem:/etc/cert.pem
+      - ./nginx/key.pem:/etc/key.pem
+    #depends_on:
+    #  - fe
+  
   certbot:
     ports:
       - "6000:80"
